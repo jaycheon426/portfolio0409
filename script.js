@@ -419,8 +419,20 @@ function initProjectModals() {
   const bodyEl = $("#projectModalBody");
   const img1 = $("#projectModalImg1");
   const img2 = $("#projectModalImg2");
+  const img1Clone = $("#projectModalImg1Clone");
+  const img2Clone = $("#projectModalImg2Clone");
   const closeBtn = $("#projectModalClose");
-  if (!modal || !dialog || !titleEl || !metaEl || !bodyEl || !img1 || !img2) {
+  if (
+    !modal ||
+    !dialog ||
+    !titleEl ||
+    !metaEl ||
+    !bodyEl ||
+    !img1 ||
+    !img2 ||
+    !img1Clone ||
+    !img2Clone
+  ) {
     setToast("모달 요소를 찾지 못했습니다. (HTML 확인 필요)");
     return;
   }
@@ -463,6 +475,9 @@ function initProjectModals() {
     const [a, b] = data.images;
     setModalImage(img1, a.src, a.alt);
     setModalImage(img2, b.src, b.alt);
+    // seamless marquee duplication
+    setModalImage(img1Clone, a.src, "");
+    setModalImage(img2Clone, b.src, "");
     modal.removeAttribute("hidden");
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
