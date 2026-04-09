@@ -88,10 +88,19 @@
 
           <div class="hero__card" aria-label="프로필 카드">
             <div class="profile">
-              <div class="profile__avatar" aria-hidden="true">
+              <div class="profile__avatar">
                 <div class="avatar">
-                  <span class="avatar__ring"></span>
-                  <span class="avatar__inner"></span>
+                  <span class="avatar__ring" aria-hidden="true"></span>
+                  <img
+                    class="avatar__photo"
+                    src="images/profile.jpg"
+                    alt="YourName 프로필 사진"
+                    width="108"
+                    height="108"
+                    loading="lazy"
+                    decoding="async"
+                    onerror="this.onerror=null;this.src='images/avatar.svg';"
+                  />
                 </div>
               </div>
               <div class="profile__meta">
@@ -238,7 +247,25 @@
           </header>
 
           <div class="projects">
-            <article class="projectCard">
+            <article
+              class="projectCard"
+              data-project="funnel"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="프로젝트 상세: 구매 퍼널 분석 및 전환 개선"
+            >
+              <div class="projectCard__thumb">
+                <img
+                  src="images/project-funnel.png"
+                  alt="구매 퍼널 분석 프로젝트 썸네일"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.onerror=null;this.src='images/project-placeholder.svg';"
+                />
+              </div>
               <div class="projectCard__head">
                 <h3 class="projectCard__title">구매 퍼널 분석 &amp; 전환 개선</h3>
                 <p class="projectCard__meta">Funnel · SQL · Insight</p>
@@ -262,7 +289,25 @@
               </div>
             </article>
 
-            <article class="projectCard">
+            <article
+              class="projectCard"
+              data-project="cohort"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="프로젝트 상세: 리텐션 코호트 분석"
+            >
+              <div class="projectCard__thumb">
+                <img
+                  src="images/project-cohort.png"
+                  alt="리텐션 코호트 분석 프로젝트 썸네일"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.onerror=null;this.src='images/project-placeholder.svg';"
+                />
+              </div>
               <div class="projectCard__head">
                 <h3 class="projectCard__title">리텐션 코호트 분석</h3>
                 <p class="projectCard__meta">Cohort · SQL · Segmentation</p>
@@ -286,7 +331,25 @@
               </div>
             </article>
 
-            <article class="projectCard">
+            <article
+              class="projectCard"
+              data-project="dashboard"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="프로젝트 상세: KPI 대시보드 구축"
+            >
+              <div class="projectCard__thumb">
+                <img
+                  src="images/project-dashboard.png"
+                  alt="KPI 대시보드 프로젝트 썸네일"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.onerror=null;this.src='images/project-placeholder.svg';"
+                />
+              </div>
               <div class="projectCard__head">
                 <h3 class="projectCard__title">KPI 대시보드 구축</h3>
                 <p class="projectCard__meta">BI · Dashboard · Monitoring</p>
@@ -400,6 +463,43 @@
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <div
+      id="projectModal"
+      class="projectModal"
+      hidden
+      aria-hidden="true"
+    >
+      <div class="projectModal__backdrop" data-modal-close tabindex="-1"></div>
+      <div
+        class="projectModal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="projectModalTitle"
+        tabindex="-1"
+      >
+        <button
+          type="button"
+          id="projectModalClose"
+          class="projectModal__close"
+          data-modal-close
+          aria-label="닫기"
+        >
+          ×
+        </button>
+        <h2 id="projectModalTitle" class="projectModal__title"></h2>
+        <p id="projectModalMeta" class="projectModal__meta"></p>
+        <div class="projectModal__images">
+          <figure class="projectModal__figure">
+            <img id="projectModalImg1" alt="" width="800" height="450" />
+          </figure>
+          <figure class="projectModal__figure">
+            <img id="projectModalImg2" alt="" width="800" height="450" />
+          </figure>
+        </div>
+        <div id="projectModalBody" class="projectModal__body"></div>
+      </div>
+    </div>
 
     <script src="./script.js" defer></script>
   </body>
