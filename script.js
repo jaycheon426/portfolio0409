@@ -202,40 +202,52 @@ function initFooterYear() {
 const PROJECT_MODAL_IMG_FALLBACK = "images/project-placeholder.svg";
 
 const PROJECT_MODAL_DATA = {
+  taxonomy: {
+    title: "Taxonomy & Dashboard",
+    meta: "Data Architecture · UTM · Tableau",
+    images: [
+      { src: "images/taxonomy-detail-1.png", alt: "이벤트/프로퍼티 스키마 샘플" },
+      { src: "images/taxonomy-detail-2.png", alt: "대시보드 UI 샘플" },
+    ],
+    paragraphs: [
+      "단일 뷰(Single View)와 데이터 기반 문화를 만들기 위해, 채널 분류를 위한 UTM 전략을 정리하고 이벤트/프로퍼티 택소노미를 설계했습니다. 추적 정의가 바뀌어도 운영이 흔들리지 않도록 용어·규칙을 문서화해 커뮤니케이션 비용을 낮췄습니다.",
+      "정의된 지표가 실제로 ‘의사결정에 쓰이게’ 만드는 것을 목표로 Tableau 대시보드(UI/드릴다운)를 구성해 공유했습니다. 이해관계자들이 같은 화면에서 같은 숫자를 보고 빠르게 합의할 수 있도록 기준과 맥락을 함께 제공했습니다.",
+    ],
+  },
   funnel: {
-    title: "구매 퍼널 분석 & 전환 개선",
-    meta: "Funnel · SQL · Insight",
+    title: "Funnel & Cohort Analysis",
+    meta: "SQL · Sequential Funnel · Retention",
     images: [
       { src: "images/funnel-detail-1.png", alt: "퍼널 단계별 전환·이탈 지표 요약" },
       { src: "images/funnel-detail-2.png", alt: "세그먼트별 이탈 원인 비교" },
     ],
     paragraphs: [
-      "이벤트 로그를 정제해 단계별 퍼널을 정의하고, 단계 간 이탈이 큰 구간을 우선순위로 잡았습니다. 디바이스·유입 채널·첫 구매 여부 등으로 세그먼트를 나눠 ‘어디서’ ‘누가’ 이탈하는지 수치로 설명했습니다.",
-      "가설 기반으로 개선안(카피, 결제 단계 UX, 장바구니 리마인드 등)과 함께 모니터링할 지표·대시보드 초안을 제안해, 이후 실험과 성과 측정으로 이어질 수 있게 정리했습니다.",
+      "SQL로 데이터를 추출·정제한 뒤, 순차 퍼널(Sequential Funnel)을 구성해 단계별 전환/이탈을 측정했습니다. 세그먼트를 나눠 ‘누가’ ‘어디서’ 이탈하는지 구조적으로 설명하고, 우선순위를 정해 개선 포인트를 좁혔습니다.",
+      "코호트/리텐션(Stickiness) 분석을 함께 수행해 단기 전환과 장기 잔존을 동시에 보도록 설계했습니다. 결과를 액션 플랜으로 정리해, 다음 실험/최적화 루프로 이어질 수 있게 만들었습니다.",
     ],
   },
-  cohort: {
-    title: "리텐션 코호트 분석",
-    meta: "Cohort · SQL · Segmentation",
+  segment: {
+    title: "Segment Optimization",
+    meta: "RFM · Targeting · Optimization Loop",
     images: [
-      { src: "images/cohort-detail-1.png", alt: "코호트 리텐션 히트맵" },
-      { src: "images/cohort-detail-2.png", alt: "액티베이션 행동과 리텐션 상관" },
+      { src: "images/segment-detail-1.png", alt: "RFM 분석 모델 샘플" },
+      { src: "images/segment-detail-2.png", alt: "Audience 타겟팅 및 최적화 루프" },
     ],
     paragraphs: [
-      "첫 핵심 행동(가입·첫 구매 등) 시점을 기준으로 코호트를 구성하고, 주차·월 단위 리텐션 곡선을 비교했습니다. 초기 이탈이 큰 코호트와 장기 잔존이 높은 코호트의 행동 차이를 SQL로 집계해 패턴을 도출했습니다.",
-      "‘액티베이션’으로 정의할 행동을 데이터로 좁힌 뒤, 해당 행동 완료율을 올리는 캠페인·온보딩 실험 아이디어와 측정 지표를 제안했습니다.",
+      "Heavy User/Light User/Non-purchase 등 세그먼트를 정의하고, RFM 모델을 기반으로 오디언스를 구성했습니다. 각 세그먼트의 목적(재구매/활성/전환)에 맞는 메시지·채널 전략을 제안했습니다.",
+      "성과를 다시 세그먼트 정의와 타겟팅 로직에 반영하는 최적화 루프를 설계해, 반복적으로 효율을 개선할 수 있는 구조를 만들었습니다.",
     ],
   },
-  dashboard: {
-    title: "KPI 대시보드 구축",
-    meta: "BI · Dashboard · Monitoring",
+  market: {
+    title: "Competitor Analysis",
+    meta: "App Market · Benchmarking · Insight",
     images: [
-      { src: "images/dashboard-detail-1.png", alt: "KPI 대시보드 개요 화면" },
-      { src: "images/dashboard-detail-2.png", alt: "드릴다운 및 필터 예시" },
+      { src: "images/market-detail-1.png", alt: "시장/경쟁 지표 시각화 샘플" },
+      { src: "images/market-detail-2.png", alt: "벤치마킹 인사이트 요약" },
     ],
     paragraphs: [
-      "이해관계자 인터뷰로 ‘매일 보는 숫자’와 의사결정 시나리오를 정리한 뒤, 지표 정의(분자·분모·집계 주기)를 문서화했습니다. Tableau/Power BI 등에서 일관된 필터·드릴다운 구조로 볼 수 있게 설계했습니다.",
-      "알림·모니터링 기준(임계치, 비교 기간)을 합의하고, 리포트 대신 셀프서비스로 확인 가능한 화면으로 옮겨 운영 문의를 줄이는 방향으로 마무리했습니다.",
+      "모바일 앱 시장 및 경쟁 서비스를 비교하기 위해 지표 체계를 정리하고, 핵심 KPI와 사용성/성장 지표를 시각화했습니다. 단순 비교가 아니라 ‘우리 서비스가 어디에서 이길 수 있는지’에 초점을 맞춰 분석을 구성했습니다.",
+      "벤치마킹 결과를 실행 가능한 제안(우선순위/기대효과/리스크) 형태로 정리해 공유했습니다.",
     ],
   },
 };

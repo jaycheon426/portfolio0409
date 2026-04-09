@@ -10,8 +10,9 @@
   - 파일이 없으면 자동으로 project-placeholder.svg 가 표시됩니다.
 
 프로젝트 상세 모달 (각 2장)
-  - 퍼널: funnel-detail-1.png, funnel-detail-2.png
-  - 코호트: cohort-detail-1.png, cohort-detail-2.png
-  - 대시보드: dashboard-detail-1.png, dashboard-detail-2.png
+  - taxonomy: taxonomy-detail-1.png, taxonomy-detail-2.png
+  - funnel: funnel-detail-1.png, funnel-detail-2.png
+  - segment: segment-detail-1.png, segment-detail-2.png
+  - market: market-detail-1.png, market-detail-2.png
   - 파일명·경로는 script.js 의 PROJECT_MODAL_DATA 에서 수정할 수 있습니다.
   - 없으면 모달 안에서도 project-placeholder.svg 로 대체됩니다.
