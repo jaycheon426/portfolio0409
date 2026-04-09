@@ -35,20 +35,48 @@ html[data-theme="light"] {
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
+html {
+  min-height: 100%;
+  background-color: var(--bg);
+  background-image: radial-gradient(
+      ellipse 130% 70% at 50% -15%,
+      rgba(124, 108, 255, 0.28),
+      transparent 58%
+    ),
+    radial-gradient(ellipse 90% 55% at 100% 25%, rgba(34, 211, 238, 0.14), transparent 52%),
+    radial-gradient(ellipse 70% 45% at 0% 55%, rgba(124, 108, 255, 0.1), transparent 50%),
+    linear-gradient(
+      180deg,
+      #141a32 0%,
+      var(--bg) 28%,
+      #0a1222 58%,
+      #080f1c 100%
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+html[data-theme="light"] {
+  background-image: radial-gradient(
+      ellipse 130% 70% at 50% -12%,
+      rgba(124, 108, 255, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(ellipse 90% 50% at 100% 22%, rgba(34, 211, 238, 0.1), transparent 50%),
+    radial-gradient(ellipse 70% 45% at 0% 50%, rgba(124, 108, 255, 0.06), transparent 48%),
+    linear-gradient(180deg, #ececfe 0%, var(--bg) 32%, #e8f2fc 72%, #e4ecfa 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 body {
+  min-height: 100%;
   margin: 0;
   font-family: var(--font);
-  background: radial-gradient(1200px 700px at 20% -10%, rgba(124, 108, 255, 0.35), transparent 60%),
-    radial-gradient(900px 600px at 90% 10%, rgba(34, 211, 238, 0.22), transparent 55%),
-    var(--bg);
   color: var(--text);
   line-height: 1.6;
   letter-spacing: -0.2px;
+  background: transparent;
 }
 
 a {
@@ -102,11 +130,11 @@ textarea {
   height: var(--header-h);
   display: flex;
   align-items: center;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  background: color-mix(in srgb, var(--bg) 52%, transparent);
   border-bottom: 1px solid transparent;
-  transition: border-color 200ms ease, box-shadow 200ms ease;
+  transition: border-color 200ms ease, box-shadow 200ms ease, background 200ms ease;
 }
 .header.is-elevated {
   border-bottom-color: var(--border);
@@ -456,11 +484,6 @@ textarea {
 
 .section {
   padding: 54px 0;
-}
-.section--muted {
-  background: color-mix(in srgb, var(--panel) 30%, transparent);
-  border-top: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
 }
 .section__head {
   display: grid;
