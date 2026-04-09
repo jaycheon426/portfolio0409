@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="데이터 분석가 포트폴리오 — 분석 프로젝트, 기술 스택, 소개 및 연락처"
+    />
+    <title>Data Analyst YourName | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="header" data-elevate>
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="홈으로">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">Data. <strong>YourName</strong></span>
+        </a>
+
+        <nav class="nav" aria-label="주요 메뉴">
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navMenu"
+          >
+            <span class="nav__toggleBars" aria-hidden="true"></span>
+            <span class="sr-only">메뉴 열기</span>
+          </button>
+
+          <div class="nav__menu" id="navMenu">
+            <a class="nav__link" href="#about">About</a>
+            <a class="nav__link" href="#stack">Stack</a>
+            <a class="nav__link" href="#projects">Projects</a>
+            <a class="nav__link" href="#contact">Contact</a>
+            <button class="theme-toggle" type="button" aria-pressed="false">
+              <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+              <span class="theme-toggle__text">Theme</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="badge">Data Analyst · Python · SQL · BI</p>
+            <h1 class="hero__title">
+              데이터로 문제를 구조화하는
+              <span class="hero__accent">분석가 YourName</span>
+            </h1>
+            <p class="hero__desc">
+              모호한 질문을 명확한 지표와 가설로 바꾸고, 데이터 정제부터 분석·시각화까지
+              한 흐름으로 연결합니다. “왜 일어났는지”를 설명하고 “무엇을 해야 하는지”로
+              이어지는 결과물을 만들고 싶습니다.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
+              <a class="btn btn--ghost" href="#contact">연락하기</a>
+            </div>
+
+            <dl class="hero__stats" aria-label="요약 지표">
+              <div class="stat">
+                <dt class="stat__label">프로젝트</dt>
+                <dd class="stat__value"><span data-count="8">0</span>+</dd>
+              </div>
+              <div class="stat">
+                <dt class="stat__label">분석 리포트</dt>
+                <dd class="stat__value"><span data-count="24">0</span>+</dd>
+              </div>
+              <div class="stat">
+                <dt class="stat__label">관심사</dt>
+                <dd class="stat__value">지표 설계 · 실험 · 의사결정</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__card" aria-label="프로필 카드">
+            <div class="profile">
+              <div class="profile__avatar" aria-hidden="true">
+                <div class="avatar">
+                  <span class="avatar__ring"></span>
+                  <span class="avatar__inner"></span>
+                </div>
+              </div>
+              <div class="profile__meta">
+                <p class="profile__name">YourName</p>
+                <p class="profile__role">Data Analyst</p>
+              </div>
+              <div class="profile__chips" aria-label="키워드">
+                <span class="chip">가설 &amp; 지표</span>
+                <span class="chip">데이터 정제</span>
+                <span class="chip">시각화</span>
+                <span class="chip">스토리텔링</span>
+              </div>
+              <div class="profile__actions">
+                <a class="btn btn--small btn--ghost" href="#contact">Email</a>
+                <a class="btn btn--small btn--primary" href="#projects"
+                  >Work</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__bg" aria-hidden="true">
+          <div class="blob blob--a"></div>
+          <div class="blob blob--b"></div>
+          <div class="grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <header class="section__head">
+            <h2 class="section__title">About Me</h2>
+            <p class="section__subtitle">
+              소개 문장은 짧고 구체적으로, 그리고 결과로 말합니다.
+            </p>
+          </header>
+
+          <div class="about">
+            <div class="about__panel">
+              <h3 class="about__title">안녕하세요. 저는 데이터로 이야기합니다.</h3>
+              <p class="about__text">
+                숫자를 “보고” 끝내지 않고, 의사결정에 “쓰이게” 만드는 것을 목표로 합니다.
+                데이터 품질(정합성/결측/이상치)부터 지표 정의, 분석 설계, 결과 공유까지
+                일관된 프로세스로 수행하는 습관을 중요하게 생각합니다.
+              </p>
+              <ul class="about__bullets">
+                <li>비즈니스 질문을 분석 문제로 재정의하고 가설을 세웁니다.</li>
+                <li>재현 가능한 분석(쿼리·노트북·대시보드)으로 공유합니다.</li>
+                <li>인사이트를 액션 아이템과 실험/모니터링으로 연결합니다.</li>
+              </ul>
+            </div>
+
+            <div class="about__panel about__panel--alt">
+              <h3 class="about__title">제가 잘하는 것</h3>
+              <div class="skills" role="list">
+                <div class="skill" role="listitem">
+                  <p class="skill__name">문제 정의</p>
+                  <p class="skill__desc">지표 설계 · KPI · 가설</p>
+                </div>
+                <div class="skill" role="listitem">
+                  <p class="skill__name">분석</p>
+                  <p class="skill__desc">EDA · 코호트 · 퍼널 · 실험</p>
+                </div>
+                <div class="skill" role="listitem">
+                  <p class="skill__name">전달</p>
+                  <p class="skill__desc">대시보드 · 리포트 · 스토리텔링</p>
+                </div>
+              </div>
+              <a class="btn btn--ghost" href="#projects">프로젝트로 확인하기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="stack">
+        <div class="container">
+          <header class="section__head">
+            <h2 class="section__title">My Tech Stack</h2>
+            <p class="section__subtitle">
+              데이터 수집/가공 → 분석 → 시각화/공유 흐름에서 자주 쓰는 도구입니다.
+            </p>
+          </header>
+
+          <div class="stack">
+            <button class="stack__pill is-active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="stack__pill" type="button" data-filter="analysis">
+              Analysis
+            </button>
+            <button class="stack__pill" type="button" data-filter="viz">
+              Visualization
+            </button>
+            <button class="stack__pill" type="button" data-filter="dataeng">
+              Data Eng
+            </button>
+          </div>
+
+          <div class="stackGrid" aria-label="기술 스택 목록">
+            <article class="stackCard" data-category="analysis">
+              <h3 class="stackCard__title">Python</h3>
+              <p class="stackCard__desc">Pandas · NumPy · 분석 자동화</p>
+            </article>
+            <article class="stackCard" data-category="analysis">
+              <h3 class="stackCard__title">SQL</h3>
+              <p class="stackCard__desc">집계 · 조인 · 윈도우 함수</p>
+            </article>
+            <article class="stackCard" data-category="analysis">
+              <h3 class="stackCard__title">Jupyter</h3>
+              <p class="stackCard__desc">EDA · 리포트 · 재현성</p>
+            </article>
+            <article class="stackCard" data-category="analysis">
+              <h3 class="stackCard__title">Statistics</h3>
+              <p class="stackCard__desc">가설검정 · 샘플링 · 추정</p>
+            </article>
+            <article class="stackCard" data-category="viz">
+              <h3 class="stackCard__title">Tableau / Power BI</h3>
+              <p class="stackCard__desc">대시보드 · KPI · 공유</p>
+            </article>
+            <article class="stackCard" data-category="viz">
+              <h3 class="stackCard__title">Matplotlib / Seaborn</h3>
+              <p class="stackCard__desc">탐색 · 비교 · 분포</p>
+            </article>
+            <article class="stackCard" data-category="dataeng">
+              <h3 class="stackCard__title">PostgreSQL</h3>
+              <p class="stackCard__desc">모델링 · 성능 · 데이터 품질</p>
+            </article>
+            <article class="stackCard" data-category="dataeng">
+              <h3 class="stackCard__title">Airflow / dbt</h3>
+              <p class="stackCard__desc">파이프라인 · 변환 · 문서화</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <header class="section__head">
+            <h2 class="section__title">Projects</h2>
+            <p class="section__subtitle">
+              “문제 → 접근 → 인사이트 → 임팩트” 중심으로 정리했습니다.
+            </p>
+          </header>
+
+          <div class="projects">
+            <article class="projectCard">
+              <div class="projectCard__head">
+                <h3 class="projectCard__title">구매 퍼널 분석 &amp; 전환 개선</h3>
+                <p class="projectCard__meta">Funnel · SQL · Insight</p>
+              </div>
+              <p class="projectCard__desc">
+                이벤트 로그를 기반으로 퍼널 단계별 이탈 지점을 정의하고, 주요 원인을
+                세그먼트로 쪼개 분석했습니다. 개선 가설과 모니터링 지표를 제안했습니다.
+              </p>
+              <div class="tagRow" aria-label="태그">
+                <span class="tag">SQL</span>
+                <span class="tag">Funnel</span>
+                <span class="tag">KPI</span>
+              </div>
+              <div class="projectCard__actions">
+                <a class="btn btn--small btn--primary" href="#" data-disabled
+                  >Live</a
+                >
+                <a class="btn btn--small btn--ghost" href="#" data-disabled
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="projectCard">
+              <div class="projectCard__head">
+                <h3 class="projectCard__title">리텐션 코호트 분석</h3>
+                <p class="projectCard__meta">Cohort · SQL · Segmentation</p>
+              </div>
+              <p class="projectCard__desc">
+                유저의 첫 행동을 기준으로 코호트를 구성하고, 기간별 리텐션을 비교해
+                핵심 행동(activation)을 정의했습니다. 리텐션 개선 실험 아이디어를 도출했습니다.
+              </p>
+              <div class="tagRow" aria-label="태그">
+                <span class="tag">Cohort</span>
+                <span class="tag">Retention</span>
+                <span class="tag">SQL</span>
+              </div>
+              <div class="projectCard__actions">
+                <a class="btn btn--small btn--primary" href="#" data-disabled
+                  >Live</a
+                >
+                <a class="btn btn--small btn--ghost" href="#" data-disabled
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="projectCard">
+              <div class="projectCard__head">
+                <h3 class="projectCard__title">KPI 대시보드 구축</h3>
+                <p class="projectCard__meta">BI · Dashboard · Monitoring</p>
+              </div>
+              <p class="projectCard__desc">
+                이해관계자 인터뷰로 핵심 지표를 정의하고, 드릴다운 가능한 대시보드로
+                전환했습니다. 알림/모니터링 기준을 합의해 운영 효율을 높였습니다.
+              </p>
+              <div class="tagRow" aria-label="태그">
+                <span class="tag">Tableau</span>
+                <span class="tag">KPI</span>
+                <span class="tag">Storytelling</span>
+              </div>
+              <div class="projectCard__actions">
+                <a class="btn btn--small btn--primary" href="#" data-disabled
+                  >Live</a
+                >
+                <a class="btn btn--small btn--ghost" href="#" data-disabled
+                  >GitHub</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="contact">
+        <div class="container">
+          <header class="section__head">
+            <h2 class="section__title">Contact</h2>
+            <p class="section__subtitle">
+              간단한 메시지를 남겨주세요. (로컬에서만 동작하는 예시 폼입니다)
+            </p>
+          </header>
+
+          <div class="contact">
+            <div class="contact__panel">
+              <h3 class="contact__title">연락처</h3>
+              <ul class="contactList">
+                <li class="contactList__item">
+                  <span class="contactList__label">Email</span>
+                  <a class="contactList__value" href="mailto:you@example.com"
+                    >you@example.com</a
+                  >
+                </li>
+                <li class="contactList__item">
+                  <span class="contactList__label">LinkedIn</span>
+                  <a class="contactList__value" href="#" data-disabled
+                    >linkedin.com/in/your-name</a
+                  >
+                </li>
+                <li class="contactList__item">
+                  <span class="contactList__label">Resume</span>
+                  <a class="contactList__value" href="#" data-disabled
+                    >Notion / PDF</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <form class="contact__panel form" id="contactForm">
+              <div class="form__row">
+                <label class="form__label" for="name">이름</label>
+                <input
+                  class="form__input"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  placeholder="홍길동"
+                />
+              </div>
+              <div class="form__row">
+                <label class="form__label" for="email">이메일</label>
+                <input
+                  class="form__input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div class="form__row">
+                <label class="form__label" for="message">메시지</label>
+                <textarea
+                  class="form__input form__input--textarea"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="어떤 내용이든 편하게 남겨주세요."
+                ></textarea>
+              </div>
+              <div class="form__actions">
+                <button class="btn btn--primary" type="submit">보내기</button>
+                <p class="form__hint" id="formHint" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy">© <span id="year"></span> YourName. All rights reserved.</p>
+        <a class="footer__top" href="#top">위로</a>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
