@@ -139,8 +139,11 @@ function initScrollSpy() {
 }
 
 function initStackFilter() {
-  const pills = $$(".stack__pill");
-  const cards = $$(".stackCard");
+  const root = $("#stack");
+  if (!root) return;
+
+  const pills = $$("[data-filter]", root);
+  const cards = $$(".stackCard", root);
   if (pills.length === 0 || cards.length === 0) return;
 
   const apply = (filter) => {
