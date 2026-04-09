@@ -527,6 +527,12 @@ textarea {
   margin: 10px 0 0;
   color: var(--muted);
 }
+.about__text p {
+  margin: 0 0 10px;
+}
+.about__text p:last-child {
+  margin-bottom: 0;
+}
 .about__bullets {
   margin: 14px 0 0;
   padding-left: 18px;
