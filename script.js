@@ -411,7 +411,10 @@ function initProjectModals() {
   const img1 = $("#projectModalImg1");
   const img2 = $("#projectModalImg2");
   const closeBtn = $("#projectModalClose");
-  if (!modal || !dialog || !titleEl || !metaEl || !bodyEl || !img1 || !img2) return;
+  if (!modal || !dialog || !titleEl || !metaEl || !bodyEl || !img1 || !img2) {
+    setToast("모달 요소를 찾지 못했습니다. (HTML 확인 필요)");
+    return;
+  }
 
   let lastFocus = null;
 
@@ -429,7 +432,10 @@ function initProjectModals() {
 
   const open = (id) => {
     const data = PROJECT_MODAL_DATA[id];
-    if (!data) return;
+    if (!data) {
+      setToast("프로젝트 데이터가 없습니다. (script.js 확인)");
+      return;
+    }
     lastFocus = document.activeElement;
     titleEl.textContent = data.title;
     metaEl.textContent = data.meta;
@@ -455,11 +461,13 @@ function initProjectModals() {
     (closeBtn || dialog).focus({ preventScroll: true });
   };
 
-  $$(".projectCard[data-project]").forEach((card) => {
-    card.addEventListener("click", (e) => {
-      open(card.dataset.project);
-    });
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest?.(".projectCard[data-project]");
+    if (!card) return;
+    open(card.dataset.project);
+  });
 
+  $$(".projectCard[data-project]").forEach((card) => {
     card.addEventListener("keydown", (e) => {
       if (e.key !== "Enter" && e.key !== " ") return;
       if (e.target !== card) return;
