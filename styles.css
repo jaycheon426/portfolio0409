@@ -575,6 +575,15 @@ textarea {
   background: var(--panel);
   color: var(--text);
   font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.stack__pill:active {
+  transform: translateY(1px);
+}
+.projectFilter {
+  pointer-events: auto;
 }
 .stack__pill.is-active {
   border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
