@@ -9,10 +9,6 @@ function updateBodyScrollLock() {
   document.body.style.overflow = navOpen || modalOpen ? "hidden" : "";
 }
 
-function clamp(n, min, max) {
-  return Math.min(max, Math.max(min, n));
-}
-
 function setToast(message) {
   const el = $("#toast");
   if (!el) return;
@@ -163,40 +159,6 @@ function initStackFilter() {
   });
 
   apply("all");
-}
-
-function initCountUp() {
-  const els = $$("[data-count]");
-  if (els.length === 0) return;
-
-  const animateOne = (el) => {
-    const target = Number(el.dataset.count || 0);
-    if (!Number.isFinite(target)) return;
-    const start = 0;
-    const duration = 900;
-    const t0 = performance.now();
-
-    const tick = (t) => {
-      const p = clamp((t - t0) / duration, 0, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(start + (target - start) * eased));
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  };
-
-  const io = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-        animateOne(e.target);
-        obs.unobserve(e.target);
-      });
-    },
-    { threshold: 0.4 },
-  );
-
-  els.forEach((el) => io.observe(el));
 }
 
 function initContactForm() {
@@ -379,7 +341,6 @@ function main() {
   initSmoothScroll();
   initScrollSpy();
   initStackFilter();
-  initCountUp();
   initContactForm();
   initDisabledLinks();
   initFooterYear();

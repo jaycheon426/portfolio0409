@@ -328,30 +328,6 @@ textarea {
   pointer-events: none;
 }
 
-.hero__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  margin: 18px 0 0;
-  padding: 0;
-}
-.stat {
-  border: 1px solid var(--border);
-  background: var(--panel);
-  border-radius: var(--radius);
-  padding: 12px;
-}
-.stat__label {
-  color: var(--muted2);
-  font-weight: 700;
-  font-size: 12px;
-  margin: 0;
-}
-.stat__value {
-  margin: 6px 0 0;
-  font-weight: 800;
-}
-
 .hero__card {
   border-radius: calc(var(--radius) + 8px);
   border: 1px solid var(--border);
