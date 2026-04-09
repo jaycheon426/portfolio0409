@@ -905,6 +905,21 @@ textarea {
   margin-bottom: 0;
 }
 
+.codeBlock {
+  margin: 12px 0 0;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 55%, var(--panel));
+  color: color-mix(in srgb, var(--text) 92%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  white-space: pre;
+  overflow: auto;
+}
+
 @media (max-width: 640px) {
   .projectModal__images {
     grid-template-columns: 1fr;
