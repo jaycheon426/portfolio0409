@@ -20,6 +20,15 @@ function setToast(message) {
   setToast._t = window.setTimeout(() => el.classList.remove("is-show"), 2400);
 }
 
+window.addEventListener("error", (e) => {
+  const msg = e?.message ? `JS 오류: ${e.message}` : "JS 오류가 발생했습니다.";
+  setToast(msg);
+});
+
+window.addEventListener("unhandledrejection", () => {
+  setToast("JS 비동기 오류가 발생했습니다.");
+});
+
 function setTheme(next) {
   const theme = next === "light" ? "light" : "dark";
   document.documentElement.dataset.theme = theme;
@@ -351,7 +360,7 @@ const PROJECT_MODAL_DATA = {
       "JOIN activity a ON a.user_id = f.user_id",
       "GROUP BY 1,2",
       "ORDER BY 1,2;",
-    ].join(\"\\n\"),
+    ].join("\n"),
   },
   funnel: {
     title: "Funnel & Cohort Analysis",
@@ -462,7 +471,10 @@ function initProjectModals() {
   };
 
   document.addEventListener("click", (e) => {
-    const card = e.target.closest?.(".projectCard[data-project]");
+    const card =
+      e.target && typeof e.target.closest === "function"
+        ? e.target.closest(".projectCard[data-project]")
+        : null;
     if (!card) return;
     open(card.dataset.project);
   });
