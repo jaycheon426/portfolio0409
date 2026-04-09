@@ -669,13 +669,6 @@ textarea {
   font-size: 12px;
   font-weight: 800;
 }
-.projectCard__actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-}
-
 .contact {
   display: grid;
   gap: 12px;

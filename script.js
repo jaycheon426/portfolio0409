@@ -454,14 +454,8 @@ function initProjectModals() {
 
   $$(".projectCard[data-project]").forEach((card) => {
     card.addEventListener("click", (e) => {
-      if (e.target.closest(".projectCard__actions")) return;
       open(card.dataset.project);
     });
-
-    const actions = $(".projectCard__actions", card);
-    if (actions) {
-      actions.addEventListener("click", (e) => e.stopPropagation());
-    }
 
     card.addEventListener("keydown", (e) => {
       if (e.key !== "Enter" && e.key !== " ") return;
@@ -487,11 +481,36 @@ function initProjectModals() {
   );
 }
 
+function initProjectFilter() {
+  const root = $("#projects");
+  if (!root) return;
+
+  const pills = $$("[data-project-filter]", root);
+  const cards = $$(".projectCard[data-group]", root);
+  if (pills.length === 0 || cards.length === 0) return;
+
+  const apply = (filter) => {
+    pills.forEach((p) => p.classList.toggle("is-active", p.dataset.projectFilter === filter));
+    cards.forEach((c) => {
+      const group = c.dataset.group;
+      const show = filter === "all" || filter === group;
+      c.style.display = show ? "" : "none";
+    });
+  };
+
+  pills.forEach((p) => {
+    p.addEventListener("click", () => apply(p.dataset.projectFilter || "all"));
+  });
+
+  apply("all");
+}
+
 function main() {
   initTheme();
   initHeaderElevate();
   initMobileNav();
   initProjectModals();
+  initProjectFilter();
   initSmoothScroll();
   initScrollSpy();
   initStackFilter();

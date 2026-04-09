@@ -144,16 +144,16 @@
               <h3 class="about__title">제가 잘하는 것</h3>
               <div class="skills" role="list">
                 <div class="skill" role="listitem">
-                  <p class="skill__name">데이터 아키텍처</p>
-                  <p class="skill__desc">Taxonomy · Event Schema · UTM</p>
-                </div>
-                <div class="skill" role="listitem">
                   <p class="skill__name">그로스/제품 분석</p>
                   <p class="skill__desc">Funnel · Cohort · Retention</p>
                 </div>
                 <div class="skill" role="listitem">
                   <p class="skill__name">타겟팅/최적화</p>
                   <p class="skill__desc">RFM · 세그먼트 · Optimization Loop</p>
+                </div>
+                <div class="skill" role="listitem">
+                  <p class="skill__name">데이터 아키텍처</p>
+                  <p class="skill__desc">Taxonomy · Event Schema · UTM</p>
                 </div>
               </div>
               <a class="btn btn--ghost" href="#projects">프로젝트로 확인하기</a>
@@ -232,10 +232,36 @@
             </p>
           </header>
 
+          <div class="stack projectFilter" aria-label="프로젝트 그룹">
+            <button
+              class="stack__pill is-active"
+              type="button"
+              data-project-filter="all"
+            >
+              All
+            </button>
+            <button class="stack__pill" type="button" data-project-filter="architecture">
+              Data Architecture
+            </button>
+            <button class="stack__pill" type="button" data-project-filter="growth">
+              Growth &amp; Product
+            </button>
+            <button class="stack__pill" type="button" data-project-filter="targeting">
+              Targeting
+            </button>
+            <button class="stack__pill" type="button" data-project-filter="market">
+              Market
+            </button>
+            <button class="stack__pill" type="button" data-project-filter="sql">
+              SQL
+            </button>
+          </div>
+
           <div class="projects">
             <article
               class="projectCard"
               data-project="taxonomy"
+              data-group="architecture"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -265,19 +291,12 @@
                 <span class="tag">Event Schema</span>
                 <span class="tag">Dashboard</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled
-                  >Live</a
-                >
-                <a class="btn btn--small btn--ghost" href="#" data-disabled
-                  >GitHub</a
-                >
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="funnel"
+              data-group="growth"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -307,19 +326,12 @@
                 <span class="tag">Funnel</span>
                 <span class="tag">Cohort</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled
-                  >Live</a
-                >
-                <a class="btn btn--small btn--ghost" href="#" data-disabled
-                  >GitHub</a
-                >
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="segment"
+              data-group="targeting"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -349,19 +361,12 @@
                 <span class="tag">Audience</span>
                 <span class="tag">Optimization</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled
-                  >Live</a
-                >
-                <a class="btn btn--small btn--ghost" href="#" data-disabled
-                  >GitHub</a
-                >
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="market"
+              data-group="market"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -391,19 +396,12 @@
                 <span class="tag">Metrics</span>
                 <span class="tag">Visualization</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled
-                  >Live</a
-                >
-                <a class="btn btn--small btn--ghost" href="#" data-disabled
-                  >GitHub</a
-                >
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="finance-campaign"
+              data-group="targeting"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -433,15 +431,12 @@
                 <span class="tag">Conversion</span>
                 <span class="tag">Attribution</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled>Live</a>
-                <a class="btn btn--small btn--ghost" href="#" data-disabled>GitHub</a>
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="beauty-rfm"
+              data-group="targeting"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -471,15 +466,12 @@
                 <span class="tag">SQL</span>
                 <span class="tag">Python</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled>Live</a>
-                <a class="btn btn--small btn--ghost" href="#" data-disabled>GitHub</a>
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="auto-ga"
+              data-group="growth"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -509,15 +501,12 @@
                 <span class="tag">UTM</span>
                 <span class="tag">Event</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled>Live</a>
-                <a class="btn btn--small btn--ghost" href="#" data-disabled>GitHub</a>
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="auto-dashboard"
+              data-group="architecture"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -547,15 +536,12 @@
                 <span class="tag">Single View</span>
                 <span class="tag">Documentation</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled>Live</a>
-                <a class="btn btn--small btn--ghost" href="#" data-disabled>GitHub</a>
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="commerce-behavior"
+              data-group="growth"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -585,15 +571,12 @@
                 <span class="tag">Retention</span>
                 <span class="tag">Benchmark</span>
               </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled>Live</a>
-                <a class="btn btn--small btn--ghost" href="#" data-disabled>GitHub</a>
-              </div>
             </article>
 
             <article
               class="projectCard"
               data-project="sql-samples"
+              data-group="sql"
               tabindex="0"
               role="button"
               aria-haspopup="dialog"
@@ -622,10 +605,6 @@
                 <span class="tag">SQL</span>
                 <span class="tag">Funnel</span>
                 <span class="tag">Retention</span>
-              </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--small btn--primary" href="#" data-disabled>Live</a>
-                <a class="btn btn--small btn--ghost" href="#" data-disabled>GitHub</a>
               </div>
             </article>
           </div>
