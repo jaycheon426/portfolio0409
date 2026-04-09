@@ -411,16 +411,31 @@ function setModalImage(img, src, alt) {
   img.src = src;
 }
 
+function buildMarqueeFigures(images, { clone = false } = {}) {
+  const fragment = document.createDocumentFragment();
+  images.forEach(({ src, alt }) => {
+    const fig = document.createElement("figure");
+    fig.className = "projectModal__figure";
+    if (clone) fig.setAttribute("aria-hidden", "true");
+
+    const img = document.createElement("img");
+    img.width = 800;
+    img.height = 450;
+    setModalImage(img, src, clone ? "" : alt);
+
+    fig.appendChild(img);
+    fragment.appendChild(fig);
+  });
+  return fragment;
+}
+
 function initProjectModals() {
   const modal = $("#projectModal");
   const dialog = $(".projectModal__dialog", modal);
   const titleEl = $("#projectModalTitle");
   const metaEl = $("#projectModalMeta");
   const bodyEl = $("#projectModalBody");
-  const img1 = $("#projectModalImg1");
-  const img2 = $("#projectModalImg2");
-  const img1Clone = $("#projectModalImg1Clone");
-  const img2Clone = $("#projectModalImg2Clone");
+  const track = $("#projectModalTrack");
   const closeBtn = $("#projectModalClose");
   if (
     !modal ||
@@ -428,10 +443,7 @@ function initProjectModals() {
     !titleEl ||
     !metaEl ||
     !bodyEl ||
-    !img1 ||
-    !img2 ||
-    !img1Clone ||
-    !img2Clone
+    !track
   ) {
     setToast("모달 요소를 찾지 못했습니다. (HTML 확인 필요)");
     return;
@@ -472,12 +484,15 @@ function initProjectModals() {
       pre.textContent = data.code;
       bodyEl.appendChild(pre);
     }
-    const [a, b] = data.images;
-    setModalImage(img1, a.src, a.alt);
-    setModalImage(img2, b.src, b.alt);
-    // seamless marquee duplication
-    setModalImage(img1Clone, a.src, "");
-    setModalImage(img2Clone, b.src, "");
+
+    // images: 2~N장 지원 (원본 + 클론으로 무한 마퀴)
+    const images = Array.isArray(data.images) ? data.images : [];
+    track.replaceChildren();
+    if (images.length > 0) {
+      track.appendChild(buildMarqueeFigures(images, { clone: false }));
+      track.appendChild(buildMarqueeFigures(images, { clone: true }));
+    }
+
     modal.removeAttribute("hidden");
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
