@@ -218,8 +218,8 @@ const PROJECT_MODAL_DATA = {
     title: "Taxonomy & Dashboard",
     meta: "Data Architecture · UTM · Tableau",
     images: [
-      { src: "images/taxonomy-detail-1.png", alt: "이벤트/프로퍼티 스키마 샘플" },
-      { src: "images/taxonomy-detail-2.png", alt: "대시보드 UI 샘플" },
+      { src: "images/taxonomy-detail-1.jpg", alt: "이벤트/프로퍼티 스키마 샘플" },
+      { src: "images/taxonomy-detail-2.jpg", alt: "대시보드 UI 샘플" },
     ],
     paragraphs: [
       "단일 뷰(Single View)와 데이터 기반 문화를 만들기 위해, 채널 분류를 위한 UTM 전략을 정리하고 이벤트/프로퍼티 택소노미를 설계했습니다. 추적 정의가 바뀌어도 운영이 흔들리지 않도록 용어·규칙을 문서화해 커뮤니케이션 비용을 낮췄습니다.",
@@ -266,8 +266,8 @@ const PROJECT_MODAL_DATA = {
     title: "마케팅 성과 자동화 대시보드 설계",
     meta: "Table Design · Spec · Tableau (설계/커뮤니케이션)",
     images: [
-      { src: "images/auto-dashboard-detail-1.png", alt: "적재 테이블 설계 및 매칭 구조" },
-      { src: "images/auto-dashboard-detail-2.png", alt: "대시보드 화면 설계/명세 샘플" },
+      { src: "images/테이블설계.jpg", alt: "적재 테이블 설계 및 매칭 구조" },
+      { src: "images/화면설계서.jpg", alt: "대시보드 화면 설계/명세 샘플" },
     ],
     paragraphs: [
       "Google Analytics 리포팅 데이터와 일별 광고 성과 데이터를 일자별로 매칭하기 전, 광고·웹로그 데이터 적재를 위한 테이블을 설계하고 개발팀과 커뮤니케이션을 수행했습니다.",
@@ -278,8 +278,8 @@ const PROJECT_MODAL_DATA = {
     title: "모바일 앱 유저 행동 데이터 분석",
     meta: "Journey · Retention · Churn Definition",
     images: [
-      { src: "images/commerce-detail-1.png", alt: "커머스 앱 시장/경쟁 앱 비교" },
-      { src: "images/commerce-detail-2.png", alt: "신규/헤비/이탈 유저 리텐션 및 활동성 분석" },
+      { src: "images/리텐션.jpg", alt: "기간별 리텐션·유저 비율 분석" },
+      { src: "images/리텐션2.jpg", alt: "세그먼트별 리텐션·활동성 비교" },
     ],
     paragraphs: [
       "신규 유저 최적화와 기존 유저 리텐션 증대를 위해, 유저 Journey에 따라 커머스 앱 시장 현황 분석, 자사/경쟁 앱 비교, 신규/헤비/이탈(휴면) 유저의 이용 행태를 분석했습니다.",
@@ -290,8 +290,8 @@ const PROJECT_MODAL_DATA = {
     title: "SQL 활용 샘플",
     meta: "Funnel · Cross-purchase · Retention",
     images: [
-      { src: "images/sql-detail-1.png", alt: "구매 단계 퍼널 분석 결과 예시" },
-      { src: "images/sql-detail-2.png", alt: "리텐션/코호트 분석 결과 예시" },
+      { src: "images/sql샘플.jpg", alt: "구매 단계 퍼널 분석 결과 예시" },
+      { src: "images/SQL3.jpg", alt: "리텐션/코호트 분석 결과 예시" },
     ],
     paragraphs: [
       "실무에서 사용한 리텐션·코호트·퍼널 등 다양한 방법론의 쿼리를 구현하고, 데이터 정제를 수행했습니다. (분석 테이블/컬럼명은 가상의 이름으로 대체)",
@@ -370,6 +370,7 @@ const PROJECT_MODAL_DATA = {
         src: "images/project-youtube-nlp.png",
         alt: "유튜브 API 생성, 댓글 크롤링, CSV 저장, Top200 단어, 워드클라우드까지의 흐름 요약",
       },
+      { src: "images/크롤링2.jpg", alt: "Colab·API 기반 댓글 수집 코드 및 출력 예시" },
     ],
     paragraphs: [
       "YouTube Data API v3로 아티스트 채널 영상의 댓글을 수집했습니다. Google Colab에서 API 키와 videoId를 연결해 댓글을 페이지 단위로 가져오는 방식으로 크롤링하고, 분석용 CSV로 저장·업로드해 후속 처리에 바로 쓰일 수 있게 했습니다.",
@@ -380,10 +381,9 @@ const PROJECT_MODAL_DATA = {
     title: "Python: 이상치·결측치 제거 (전처리)",
     meta: "Python · SQL · IQR · Z-Score · 시각화",
     images: [
-      {
-        src: "images/project-python-preprocessing.png",
-        alt: "IQR·Z-Score 이상치 제거 전후 박스플롯, 중앙값·분포 히스토그램, 정규성 Q-Q 플롯 비교(한 화면 요약)",
-      },
+      { src: "images/이상치제거1.jpg", alt: "IQR·Z-Score를 활용한 이상치 제거 전후 박스플롯" },
+      { src: "images/이상치제거2.jpg", alt: "이상치 제거 전·후 중앙값 및 분포(히스토그램)" },
+      { src: "images/이상치제거3.jpg", alt: "이상치 제거 전·후 정규성 비교(Q-Q 플롯)" },
     ],
     paragraphs: [
       "특정 카메라 상품군의 구매자·매출을 상품명 기준으로 분석하기 위해 데이터 품질을 높이는 전처리에 집중했습니다. 카메라 특성상 가격대가 높아 수동 최소 가격 하한을 두고, Z-Score(>3)와 IQR 방식으로 이상치를 식별·제거했습니다. 매출·구매 단위 집계는 SQL로 추출한 뒤 Python에서 시각화해 두 방법의 차이를 비교했습니다.",
@@ -394,8 +394,8 @@ const PROJECT_MODAL_DATA = {
     title: "Funnel & Cohort Analysis",
     meta: "SQL · Sequential Funnel · Retention",
     images: [
-      { src: "images/funnel-detail-1.png", alt: "퍼널 단계별 전환·이탈 지표 요약" },
-      { src: "images/funnel-detail-2.png", alt: "세그먼트별 이탈 원인 비교" },
+      { src: "images/퍼널분석.jpg", alt: "퍼널 단계별 전환·이탈 지표 요약" },
+      { src: "images/리텐션2.jpg", alt: "코호트·리텐션 관점 보조 분석" },
     ],
     paragraphs: [
       "SQL로 데이터를 추출·정제한 뒤, 순차 퍼널(Sequential Funnel)을 구성해 단계별 전환/이탈을 측정했습니다. 세그먼트를 나눠 ‘누가’ ‘어디서’ 이탈하는지 구조적으로 설명하고, 우선순위를 정해 개선 포인트를 좁혔습니다.",
@@ -406,8 +406,8 @@ const PROJECT_MODAL_DATA = {
     title: "Segment Optimization",
     meta: "RFM · Targeting · Optimization Loop",
     images: [
-      { src: "images/segment-detail-1.png", alt: "RFM 분석 모델 샘플" },
-      { src: "images/segment-detail-2.png", alt: "Audience 타겟팅 및 최적화 루프" },
+      { src: "images/RFM.jpg", alt: "RFM 분석 모델 샘플" },
+      { src: "images/리포트2.jpg", alt: "Audience 타겟팅 및 최적화 루프" },
     ],
     paragraphs: [
       "Heavy User/Light User/Non-purchase 등 세그먼트를 정의하고, RFM 모델을 기반으로 오디언스를 구성했습니다. 각 세그먼트의 목적(재구매/활성/전환)에 맞는 메시지·채널 전략을 제안했습니다.",
@@ -418,8 +418,8 @@ const PROJECT_MODAL_DATA = {
     title: "Competitor Analysis",
     meta: "App Market · Benchmarking · Insight",
     images: [
-      { src: "images/market-detail-1.png", alt: "시장/경쟁 지표 시각화 샘플" },
-      { src: "images/market-detail-2.png", alt: "벤치마킹 인사이트 요약" },
+      { src: "images/브랜드포지셔닝.jpg", alt: "시장/경쟁 지표 시각화 샘플" },
+      { src: "images/대시보드3.jpg", alt: "벤치마킹 인사이트 요약" },
     ],
     paragraphs: [
       "모바일 앱 시장 및 경쟁 서비스를 비교하기 위해 지표 체계를 정리하고, 핵심 KPI와 사용성/성장 지표를 시각화했습니다. 단순 비교가 아니라 ‘우리 서비스가 어디에서 이길 수 있는지’에 초점을 맞춰 분석을 구성했습니다.",
