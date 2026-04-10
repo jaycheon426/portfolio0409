@@ -230,8 +230,8 @@ const PROJECT_MODAL_DATA = {
     title: "캠페인 성과 분석 (금융)",
     meta: "Targeting · Validation · MMP(adbrix)",
     images: [
-      { src: "images/finance-detail-1.png", alt: "타겟 세그먼트 정의 및 비교" },
-      { src: "images/finance-detail-2.png", alt: "캠페인 전후 성과 및 기여도 분석" },
+      { src: "images/finance-detail-1.jpg", alt: "타겟 세그먼트 정의 및 비교" },
+      { src: "images/finance-detail-2.jpg", alt: "캠페인 전후 성과 및 기여도 분석" },
     ],
     paragraphs: [
       "기존 금융 서비스 이용자의 앱 이용 행태를 분석해 신규 가입 가능성이 높은 타겟 그룹을 정의했습니다. 1st Party 데이터와 3rd Party 데이터를 결합해 데모·활동성·관심사 카테고리 관점에서 세그먼트를 구성했습니다.",
@@ -242,8 +242,8 @@ const PROJECT_MODAL_DATA = {
     title: "유저 특성 분석 & 타겟 도출 (커머스)",
     meta: "RFM · Audience · Targeting Options",
     images: [
-      { src: "images/beauty-detail-1.png", alt: "RFM 기반 4그룹 설계" },
-      { src: "images/beauty-detail-2.png", alt: "그룹별 특성 분석 및 타겟 옵션" },
+      { src: "images/beauty-detail-1.jpg", alt: "RFM 기반 4그룹 설계" },
+      { src: "images/beauty-detail-2.jpg", alt: "그룹별 특성 분석 및 타겟 옵션" },
     ],
     paragraphs: [
       "뷰티 커머스 앱 헬스 카테고리 구매 전환 극대화를 위해, 최근 6개월 이너뷰티 제품 구매자를 대상으로 RFM 모형을 적용했습니다. Heavy/Mid/Light/One-time-buy 4개 그룹으로 구매 관여도를 구분했습니다.",
@@ -254,8 +254,8 @@ const PROJECT_MODAL_DATA = {
     title: "웹사이트 유입·전환 분석 (자동차 런칭)",
     meta: "Google Analytics · UTM · Event Tracking",
     images: [
-      { src: "images/auto-ga-detail-1.png", alt: "엔진별 유입/전환 성과 요약" },
-      { src: "images/auto-ga-detail-2.png", alt: "웹사이트 행동 퍼널(클릭/스크롤) 분석" },
+      { src: "images/auto-ga-detail-1.jpg", alt: "엔진별 유입/전환 성과 요약" },
+      { src: "images/auto-ga-detail-2.jpg", alt: "웹사이트 행동 퍼널(클릭/스크롤) 분석" },
     ],
     paragraphs: [
       "국내 자동차 런칭 캠페인의 엔진별 성과 분석을 위해 Google Analytics 기반 분석을 수행했습니다. 엔진별 타겟팅/소재 제작이 필요해, 사전 이벤트 트래킹 데이터를 활용해 엔진별 타겟 프로파일링(세그먼트) 분석을 선행했습니다.",
