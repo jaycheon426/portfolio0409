@@ -20,5 +20,7 @@
   - auto-dashboard: auto-dashboard-detail-1.png, auto-dashboard-detail-2.png
   - commerce-behavior: commerce-detail-1.png, commerce-detail-2.png
   - sql-samples: sql-detail-1.png, sql-detail-2.png
+  - youtube-api-nlp: project-youtube-nlp.png (개요 슬라이드; 추가 이미지는 PROJECT_MODAL_DATA.images 배열에 넣으면 됩니다)
+  - python-outlier-preprocess: project-python-preprocessing.png (박스플롯·히스토그램·Q-Q 플롯 요약 슬라이드)
   - 파일명·경로는 script.js 의 PROJECT_MODAL_DATA 에서 수정할 수 있습니다.
   - 없으면 모달 안에서도 project-placeholder.svg 로 대체됩니다.

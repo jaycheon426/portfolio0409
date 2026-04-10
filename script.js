@@ -362,6 +362,34 @@ const PROJECT_MODAL_DATA = {
       "ORDER BY 1,2;",
     ].join("\n"),
   },
+  "youtube-api-nlp": {
+    title: "Python: YouTube API 댓글 수집·시각화",
+    meta: "API · Colab · CSV · Word Cloud",
+    images: [
+      {
+        src: "images/project-youtube-nlp.png",
+        alt: "유튜브 API 생성, 댓글 크롤링, CSV 저장, Top200 단어, 워드클라우드까지의 흐름 요약",
+      },
+    ],
+    paragraphs: [
+      "YouTube Data API v3로 아티스트 채널 영상의 댓글을 수집했습니다. Google Colab에서 API 키와 videoId를 연결해 댓글을 페이지 단위로 가져오는 방식으로 크롤링하고, 분석용 CSV로 저장·업로드해 후속 처리에 바로 쓰일 수 있게 했습니다.",
+      "댓글 본문을 전처리한 뒤 가장 많이 등장한 단어 상위 200개를 추출하고, 빈도를 기반으로 워드클라우드를 그려 주요 키워드와 여론·트렌드를 한눈에 볼 수 있도록 정리했습니다.",
+    ],
+  },
+  "python-outlier-preprocess": {
+    title: "Python: 이상치·결측치 제거 (전처리)",
+    meta: "Python · SQL · IQR · Z-Score · 시각화",
+    images: [
+      {
+        src: "images/project-python-preprocessing.png",
+        alt: "IQR·Z-Score 이상치 제거 전후 박스플롯, 중앙값·분포 히스토그램, 정규성 Q-Q 플롯 비교(한 화면 요약)",
+      },
+    ],
+    paragraphs: [
+      "특정 카메라 상품군의 구매자·매출을 상품명 기준으로 분석하기 위해 데이터 품질을 높이는 전처리에 집중했습니다. 카메라 특성상 가격대가 높아 수동 최소 가격 하한을 두고, Z-Score(>3)와 IQR 방식으로 이상치를 식별·제거했습니다. 매출·구매 단위 집계는 SQL로 추출한 뒤 Python에서 시각화해 두 방법의 차이를 비교했습니다.",
+      "박스플롯으로 Z-Score·IQR 적용 전후 분포를 확인하고, 히스토그램으로 중앙값과 분포 형태의 변화를 추가로 점검했습니다. Q-Q 플롯으로 정규성에 가까워졌는지 본 결과, IQR으로 걸러낸 데이터가 기준선에 더 잘 맞아 비즈니스 맥락에서 신뢰할 수 있다고 판단해 최종 분석에는 IQR 기준을 채택했습니다.",
+    ],
+  },
   funnel: {
     title: "Funnel & Cohort Analysis",
     meta: "SQL · Sequential Funnel · Retention",

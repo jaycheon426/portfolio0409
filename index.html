@@ -149,6 +149,10 @@
               <ul class="about__bullets">
                 <li>UTM 전략·GTM 기반 이벤트/프로퍼티 스키마 설계를 합니다.</li>
                 <li>SQL(CTE/Join/Window)로 데이터를 추출·가공해 분석합니다.</li>
+                <li>
+                  Python과 REST API(예: YouTube Data API)로 댓글 등 텍스트를 수집·크롤링하고, CSV 저장·빈도 분석·워드클라우드
+                  시각화까지 이어갈 수 있습니다.
+                </li>
                 <li>Tableau 대시보드로 지표를 시각화하고 커뮤니케이션합니다.</li>
               </ul>
             </div>
@@ -180,7 +184,7 @@
           <header class="section__head">
             <h2 class="section__title">My Tech Stack</h2>
             <p class="section__subtitle">
-              데이터 수집/가공 → 분석 → 시각화/공유 흐름에서 자주 쓰는 도구입니다.
+              데이터 수집/가공(API·스크립트 포함) → 분석 → 시각화/공유 흐름에서 자주 쓰는 도구입니다.
             </p>
           </header>
 
@@ -196,6 +200,9 @@
             </button>
             <button class="stack__pill" type="button" data-filter="dataeng">
               Data Eng
+            </button>
+            <button class="stack__pill" type="button" data-filter="engineering">
+              Engineering
             </button>
           </div>
 
@@ -232,6 +239,14 @@
               <h3 class="stackCard__title">UTM Strategy</h3>
               <p class="stackCard__desc">채널·캠페인 분류 체계</p>
             </article>
+            <article class="stackCard" data-category="engineering">
+              <h3 class="stackCard__title">Python</h3>
+              <p class="stackCard__desc">수집 스크립트 · 전처리 · 자동화</p>
+            </article>
+            <article class="stackCard" data-category="engineering">
+              <h3 class="stackCard__title">REST API · Colab</h3>
+              <p class="stackCard__desc">YouTube Data API · 댓글 크롤링 · 노트북 환경</p>
+            </article>
           </div>
         </div>
       </section>
@@ -267,6 +282,9 @@
             </button>
             <button class="stack__pill" type="button" data-project-filter="sql">
               SQL
+            </button>
+            <button class="stack__pill" type="button" data-project-filter="engineering">
+              Engineering
             </button>
           </div>
 
@@ -617,6 +635,78 @@
                 <span class="tag">SQL</span>
                 <span class="tag">Funnel</span>
                 <span class="tag">Retention</span>
+              </div>
+            </article>
+
+            <article
+              class="projectCard"
+              data-project="youtube-api-nlp"
+              data-group="engineering"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="프로젝트 상세: Python YouTube API 댓글 수집 및 시각화"
+            >
+              <div class="projectCard__thumb">
+                <img
+                  src="images/project-youtube-nlp.png"
+                  alt="YouTube API 댓글 수집·워드클라우드 프로젝트 개요"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.onerror=null;this.src='images/project-placeholder.svg';"
+                />
+              </div>
+              <div class="projectCard__head">
+                <h3 class="projectCard__title">Python: YouTube API 댓글 수집·시각화</h3>
+                <p class="projectCard__meta">API · Colab · CSV · Word Cloud</p>
+              </div>
+              <p class="projectCard__desc">
+                YouTube Data API와 Colab에서 댓글을 수집(크롤링)해 CSV로 저장하고, 상위 200개 단어 빈도를 뽑아 워드클라우드로
+                키워드·트렌드를 정리했습니다.
+              </p>
+              <div class="tagRow" aria-label="태그">
+                <span class="tag">Python</span>
+                <span class="tag">YouTube API</span>
+                <span class="tag">Crawling</span>
+                <span class="tag">NLP</span>
+              </div>
+            </article>
+
+            <article
+              class="projectCard"
+              data-project="python-outlier-preprocess"
+              data-group="engineering"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="프로젝트 상세: Python 이상치·결측치 제거 전처리"
+            >
+              <div class="projectCard__thumb">
+                <img
+                  src="images/project-python-preprocessing.png"
+                  alt="카메라 구매 데이터 이상치 제거: 박스플롯·히스토그램·Q-Q 플롯 비교"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.onerror=null;this.src='images/project-placeholder.svg';"
+                />
+              </div>
+              <div class="projectCard__head">
+                <h3 class="projectCard__title">Python: 이상치·결측치 제거 (전처리)</h3>
+                <p class="projectCard__meta">Python · SQL · IQR · Z-Score</p>
+              </div>
+              <p class="projectCard__desc">
+                상품명 기준 카메라 구매·매출 데이터에서 결측·이상치를 정리하고, 최소 가격 기준과 Z-Score(&gt;3)·IQR로 필터링
+                효과를 박스플롯·히스토그램·Q-Q 플롯으로 비교해 최종 분석에는 IQR 기준을 적용했습니다.
+              </p>
+              <div class="tagRow" aria-label="태그">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">전처리</span>
               </div>
             </article>
           </div>
