@@ -418,7 +418,7 @@ const PROJECT_MODAL_DATA = {
     title: "Competitor Analysis",
     meta: "App Market · Benchmarking · Insight",
     images: [
-      { src: "images/브랜드포지셔닝.jpg", alt: "시장/경쟁 지표 시각화 샘플" },
+      { src: "images/slide-brand-positioning-trimmed.png", alt: "시장/경쟁 지표 시각화 샘플" },
       { src: "images/대시보드3.jpg", alt: "벤치마킹 인사이트 요약" },
     ],
     paragraphs: [

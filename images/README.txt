@@ -11,7 +11,7 @@
   - taxonomy → images/대시보드1.jpg
   - funnel → images/퍼널분석.jpg
   - segment → images/RFM.jpg
-  - market → images/브랜드포지셔닝.jpg
+  - market → images/slide-brand-positioning-trimmed.png (여백 자동 트림본)
   - finance-campaign → images/finance-detail-1.jpg
   - beauty-rfm → images/beauty-detail-1.jpg
   - auto-ga → images/auto-ga-detail-1.jpg
@@ -25,7 +25,7 @@
   - taxonomy: taxonomy-detail-1.jpg, taxonomy-detail-2.jpg
   - funnel: 퍼널분석.jpg, 리텐션2.jpg
   - segment: RFM.jpg, 리포트2.jpg
-  - market: 브랜드포지셔닝.jpg, 대시보드3.jpg
+  - market: slide-brand-positioning-trimmed.png, 대시보드3.jpg
   - finance-campaign: finance-detail-1.jpg, finance-detail-2.jpg
   - beauty-rfm: beauty-detail-1.jpg, beauty-detail-2.jpg
   - auto-ga: auto-ga-detail-1.jpg, auto-ga-detail-2.jpg
@@ -36,3 +36,8 @@
   - python-outlier-preprocess: 이상치제거1.jpg, 이상치제거2.jpg, 이상치제거3.jpg
   - 파일명·경로는 index.html / script.js 에서 수정할 수 있습니다.
   - 없으면 모달 안에서도 project-placeholder.svg 로 대체됩니다.
+
+슬라이드 캡처 하단·우측 여백 제거
+  - 프로젝트 루트에서: python3 scripts/trim_whitespace.py 원본.png 결과.png
+  - 여백이 남으면 --fuzz 값을 올려보세요 (예: --fuzz 30). 기본 18.
+  - Pillow 필요: python3 -m venv .venv && . .venv/bin/activate && pip install Pillow
